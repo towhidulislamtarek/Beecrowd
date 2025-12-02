@@ -1,0 +1,23 @@
+#include <stdio.h>
+
+int main() {
+    int totalDays;
+    int years, months, days;
+
+    // Read the age in days
+    scanf("%d", &totalDays);
+
+    // Calculate years, months, and remaining days
+    years = totalDays / 365;
+    totalDays = totalDays % 365;
+
+    months = totalDays / 30;
+    days = totalDays % 30;
+
+    // Print the result
+    printf("%d ano(s)\n", years);
+    printf("%d mes(es)\n", months);
+    printf("%d dia(s)\n", days);
+
+    return 0;
+}
