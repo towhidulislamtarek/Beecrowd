@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int x, count = 0;
+
+    scanf("%d", &x);
+
+    // If x is even, start from next odd number
+    if (x % 2 == 0) {
+        x++;
+    }
+
+    // Print 6 consecutive odd numbers
+    while (count < 6) {
+        printf("%d\n", x);
+        x += 2;      // move to next odd number
+        count++;
+    }
+
+    return 0;
+}
