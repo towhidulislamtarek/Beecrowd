@@ -1,0 +1,43 @@
+#include <stdio.h>
+
+int main() {
+    int inter, gremio;
+    int choice;
+    int total = 0;
+    int winInter = 0, winGremio = 0, draw = 0;
+
+    while (1) {
+        scanf("%d %d", &inter, &gremio);
+        total++;
+
+        if (inter > gremio) {
+            winInter++;
+        } else if (gremio > inter) {
+            winGremio++;
+        } else {
+            draw++;
+        }
+
+        printf("Novo grenal (1-sim 2-nao)\n");
+        scanf("%d", &choice);
+
+        if (choice == 2) {
+            break;
+        }
+    }
+
+    printf("%d grenais\n", total);
+    printf("Inter:%d\n", winInter);
+    printf("Gremio:%d\n", winGremio);
+    printf("Empates:%d\n", draw);
+
+    if (winInter > winGremio) {
+        printf("Inter venceu mais\n");
+    } else if (winGremio > winInter) {
+        printf("Gremio venceu mais\n");
+    } else {
+        printf("Nao houve vencedor\n");
+    }
+
+    return 0;
+}
